@@ -1,1 +1,22 @@
-<p>student-edit works!</p>
+<p>Sửa sản phầm</p>
+<form [formGroup]="studentForm" (ngSubmit)="submit()">
+  <table>
+  <tr>
+    <td><input type="number" hidden formControlName = "id"></td>
+  </tr>
+  <tr>
+    <td>Tên học viên</td>
+    <td><input type="text" formControlName = "name"></td>
+  </tr>
+  <tr>
+    <td>Tuổi</td>
+    <td><input type="number" formControlName = "age"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button>Sửa sản phẩm</button></td>
+  </tr>
+</table>
+</form>
+
+
