@@ -1,0 +1,16 @@
+<p>Danh sach hoc sinh</p>
+<table>
+  <tr>
+    <td>Số thứ tự</td>
+    <td>Tên học sinh</td>
+    <td>Tuổi</td>
+  </tr>
+
+  <tr *ngFor="let student of students;index as i">
+<td>{{i+1}}</td>
+<td>{{student.name}}</td>
+<td>{{student.age}}</td>
+    <a routerLink="edit" (click)="findStudent(student)">Sửa</a>
+    <a (click)="removeStudent(student)"> xóa</a>
+  </tr>
+</table>
