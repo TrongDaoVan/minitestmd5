@@ -1,0 +1,21 @@
+<p>Tạo học sinh</p>
+<form [formGroup]="studentForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Số thứ tự</td>
+      <td><input type="number" formControlName="id"></td>
+    </tr>
+    <tr>
+      <td>Tên Học Viên</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Tuổi</td>
+      <td><input type="number" formControlName="age"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo Mới</button></td>
+    </tr>
+  </table>
+</form>

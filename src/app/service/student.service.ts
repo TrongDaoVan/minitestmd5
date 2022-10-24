@@ -5,7 +5,7 @@ import {Student} from "../model/student";
   providedIn: 'root'
 })
 export class StudentService {
-Students: Student[] = [
+students: Student[] = [
   {
     id:1,
     name: 'Trong',
@@ -25,7 +25,7 @@ Students: Student[] = [
 
   // hien tat ca
   getAll(){
-  return this.Students
+  return this.students
   }
 
   // nhan du lieu
@@ -42,20 +42,22 @@ Students: Student[] = [
   }
 
   saveStudent(student: any) {
-  this.Students.push(student);
+  this.students.push(student);
   }
 
   updateStudent(student: any, id: number){
-    for (let i = 0; i < this.Students.length; i++) {
-    if(this.Students[i].id == student.id) {
-      this.Students[i] = student;
+    for (let i = 0; i < this.students.length; i++) {
+    if(this.students[i].id == student.id) {
+      this.students[i] = student;
     }
     }
   }
 
   removeStudent (student: any) {
-  const index = this.Students.indexOf(student)
-    this.Students.slice(index,1)
+  const index = this.students.indexOf(student)
+    console.log("hello")
+    console.log(index)
+    this.students.splice(index,1)
   }
 
   constructor() { }

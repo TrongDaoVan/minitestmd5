@@ -10,14 +10,15 @@ import {StudentService} from "../../service/student.service";
 export class StudentListComponent implements OnInit {
 students: Student[] = []
 
-  constructor(private studentService: StudentService) { }
-
-  ngOnInit(): void {
-  this.getAll;
+  constructor(private studentService: StudentService) {
+  this.getAllStudents()
   }
 
-  getAll() {
-  this.students = this.studentService.getAll();
+  ngOnInit() {
+  }
+
+  getAllStudents() {
+  this.students = this.studentService.getAll()
   }
 
   removeStudent(student: any) {
